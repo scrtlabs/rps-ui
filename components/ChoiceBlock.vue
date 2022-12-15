@@ -49,7 +49,7 @@ export default {
             this.waitingForResponse = true;
             try {
                 let msg = {
-                    submit_choice: { game_id: this.gameCode, choice: choice.toLowerCase() },
+                    submit_choice: { game_code: this.gameCode, choice: choice.toLowerCase() },
                 }
 
                 let tx = await this.secretjs.tx.compute.executeContract(
