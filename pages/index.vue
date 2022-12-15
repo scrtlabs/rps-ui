@@ -10,14 +10,17 @@
                     <template v-if="walletAddress === ''">
                         <v-btn :disabled="walletIsConnecting" @click="connect()"> {{ walletIsConnecting ? 'Connecting...' : 'Connect your wallet' }}</v-btn>
                     </template>
-                    <template v-else> Address: {{ shortWalletAddress }} </template>
+                    <template v-else>
+                      <div>Address: {{ shortWalletAddress }}</div>
+                      <div><a href="https://faucet.pulsar.scrttestnet.com/" target="_">Get some SCRT</a></div>
+                    </template>
                 </div>
 
                 <!-- <v-btn @click="test()">TEST</v-btn> -->
 
                 <template v-if="walletAddress !== ''">
                     <div style="margin-top: 20px">
-                        <v-btn-toggle v-if="activeGameCode === ''" v-model="section" tile color="success accent-3" group>
+                        <v-btn-toggle mandatory v-if="activeGameCode === ''" v-model="section" tile color="success accent-3" group>
                             <v-btn value="new"> New game </v-btn>
                             <v-btn value="join"> Join existing game </v-btn>
                         </v-btn-toggle>
