@@ -118,7 +118,7 @@
 import { mapGetters } from 'vuex'
 import { handleTx } from "../helper"
 
-const wsURL = process.env.NUXT_WS;
+const wsURL = process.env.NUXT_ENV_WS;
 let ws = new WebSocket(wsURL);
 
 ws.onopen = function (e) {
