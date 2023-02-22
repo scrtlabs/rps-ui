@@ -4,9 +4,15 @@
   "private": true,
   "scripts": {
     "dev": "nuxt",
+    "dev18": "SET NODE_OPTIONS=--openssl-legacy-provider && nuxt",
+    "dev18-linux": "export NODE_OPTIONS=--openssl-legacy-provider && nuxt",
     "build": "nuxt build",
+    "build18": "SET NODE_OPTIONS=--openssl-legacy-provider && nuxt build",
+    "build18-linux": "export NODE_OPTIONS=--openssl-legacy-provider && nuxt build",
     "start": "nuxt start",
     "generate": "nuxt generate",
+    "generate18": "SET NODE_OPTIONS=--openssl-legacy-provider && nuxt generate",
+    "generate18-linux": "export NODE_OPTIONS=--openssl-legacy-provider && nuxt generate",
     "lint:prettier": "prettier --check .",
     "lint": "npm run lint:prettier",
     "lintfix": "prettier --write --list-different ."
